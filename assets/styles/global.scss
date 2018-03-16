@@ -1,0 +1,47 @@
+@import 'base';
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	font-size: 16px;
+	word-spacing: 1px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $opensans;
+	color: $color-font;
+}
+
+body {
+	background-color: $color-whitegrey;
+}
+
+main {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.l-content,
+.container {
+	@include container;
+}
+
+.page-enter-active,
+.page-leave-active {
+	@include transition();
+}
+
+.page-enter,
+.page-leave-active {
+	opacity: 0
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}

@@ -1,0 +1,153 @@
+@mixin container($max-width: $max-width) {
+	lost-center: $max-width;
+	width: 100%;
+	
+	@include media-down(xl) {
+		padding: 0 $content-padding;
+	}
+}
+
+@mixin title {
+	text-transform: uppercase;
+	@include font-size(23px);
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+@mixin transition($speed: .22s) {
+	transition: all $speed ease-in-out;
+}
+
+// --------------------------------------------------
+// Creates a dark overlay that disappears on hover
+// --------------------------------------------------
+@mixin overlay-transition {
+	position: relative;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.3);
+		transition: background .7s cubic-bezier(.25, .8, .25, 1);
+		z-index: 5;
+	}
+	
+	&:hover {
+		
+		&::after {
+			background: rgba(0,0,0,0.0);
+		}
+	}
+}
+
+
+
+
+// -------------------------------------------------------------
+// absolute centers an element within a relative positioned div
+// -------------------------------------------------------------
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+// ---------------------------------------------
+// Scss mixin and function to use rem units with pixel fallback.
+// ---------------------------------------------
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+
+// ---------------------------------------------
+// Hover mixins
+// ---------------------------------------------
+@mixin hover-state {
+	&:hover, &:active, &:focus, &.active {
+		@content;
+	}
+}
+
+
+// ---------------------------------------------
+// Button mixins
+// ---------------------------------------------
+
+
+
+// ---------------------------------------------
+// Card mixins
+// ---------------------------------------------
+@mixin card-1 {
+	box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+}
+
+@mixin card-2 {
+	box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+}
+
+
+// ---------------------------------------------
+// General helpers
+// ---------------------------------------------
+@mixin word-wrap {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+@mixin ellipsis($max-width) {
+	display: inline-block;
+	max-width: $max-width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin full-width {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	@include media(lg) {
+		padding-left: 0;
+		padding-right: 0;
+	};
+}
+
+@mixin input-base {
+	@include font-size(18px);
+	padding: 10px;
+	@include transition(.3s);
+	width: 100%;
+	resize: none;
+	border: 1px solid $color_lightgrey;
+	
+	@include hover-state {
+		outline: none;
+	};
+	
+	&:active,
+	&:focus {
+		border: 1px solid darken($color_lightgrey, 10%);
+	}
+}
