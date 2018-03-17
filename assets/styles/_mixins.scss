@@ -9,9 +9,10 @@
 
 @mixin title {
 	text-transform: uppercase;
-	@include font-size(23px);
+	@include font-size(30px);
 	margin-top: 0;
-	margin-bottom: 30px;
+	margin-bottom: $gutter;
+	color: $color-primary;
 }
 
 @mixin transition($speed: .22s) {

@@ -1,5 +1,5 @@
 <template>
-	<div class="case">
+	<div class="case-preview">
 		<nuxt-link :to="'/portfolio/case-' + id">
 			<img :src="thumbnail" alt="">
 		</nuxt-link>
@@ -26,14 +26,13 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 	$case-height-desktop: 400px;
 
-	.case {
+	.case-preview {
 		margin-bottom: $gutter-mobile;
 		height: $case-height-desktop;
-		overflow: hidden;
 
 		@include media(md) {
 			lost-column: 1/2 2 $content-padding;

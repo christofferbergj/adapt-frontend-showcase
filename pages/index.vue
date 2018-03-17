@@ -1,16 +1,32 @@
 <template>
 	<div class="l-content">
-		<CaseList :cases="loadedCases"></CaseList>
+		<div class="case-intro">
+			<CaseList :cases="loadedCases"></CaseList>
+
+			<div class="case-intro__content">
+				<h1>Let us break your competition</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult,
+					salvam esse se, quod concedimus; Itaque ab his ordiamur. Praeterea sublata cognitione et scientia
+					tollitur omnis ratio et vitae degendae et rerum gerendarum. Duo Reges: constructio interrete. Est
+					enim effectrix multarum et magnarum voluptatum. Quid enim tanto opus est instrumento in optimis
+					artibus comparandis?
+				</p>
+
+				<AppButton @click.native="$router.push('/portfolio')"></AppButton>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 	import CaseList from '~/components/Portfolio/CaseList';
+	import AppButton from '~/components/UI/AppButton';
 
 	export default {
-		layout: 'front',
 		components: {
-			CaseList
+			CaseList,
+			AppButton,
 		},
 		head: {
 			bodyAttrs: {
@@ -60,11 +76,20 @@
 <style lang="scss" scoped>
 
 	.l-content {
-		@include container;
 
-		.case-list {
-			@include media(md) {
-				margin-top: -150px;
+		.case-intro {
+
+			&__content {
+				padding: 40px;
+				max-width: 80%;
+
+				h1 {
+					@include title;
+				}
+
+				.btn {
+					margin-top: $gutter;
+				}
 			}
 		}
 	}

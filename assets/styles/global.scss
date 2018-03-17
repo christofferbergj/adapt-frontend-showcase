@@ -6,7 +6,7 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 14px;
 	word-spacing: 1px;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -20,7 +20,7 @@ body {
 	background-color: $color-whitegrey;
 }
 
-main {
+.l-main {
 	display: flex;
 	flex-flow: column wrap;
 }
@@ -28,6 +28,18 @@ main {
 .l-content,
 .container {
 	@include container;
+}
+
+.l-content {
+	
+	@include media(md) {
+		margin-top: -150px;
+		background-color: $color-white;
+		padding: $content-padding;
+		border-radius: $border-radius-default;
+		@include card-1;
+		min-height: 300px;
+	}
 }
 
 .page-enter-active,

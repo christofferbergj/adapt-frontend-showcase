@@ -28,15 +28,12 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 	.case-list {
 		display: flex;
 		flex-flow: row wrap;
 		width: 100%;
-		background-color: $color-white;
-		padding: $content-padding;
-		border-radius: $border-radius-default;
 	}
 
 </style>

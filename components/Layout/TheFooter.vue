@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 
 	.footer {
-		margin-top: 300px;
+		margin-top: 150px;
 		min-height: 300px;
 		background-color: $color-white;
 		padding: $content-padding;
