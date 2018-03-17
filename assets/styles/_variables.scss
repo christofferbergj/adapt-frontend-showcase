@@ -7,7 +7,8 @@ $opensans:                   'Open Sans', sans-serif;
 
 // colors - always define a color variable as $color-
 // ==========================================================================
-$color-primary:               #de6262;
+$color-cherry:                #de6262;
+$color-peach:                 #ffb88c;
 $color-black:                 #000000;
 $color-darkgrey:              #2b2b2b;
 $color-white:                 #ffffff;
@@ -16,9 +17,10 @@ $color-lightgrey:             #E3E3E3;
 $color-grey:                  #b4b4b4;
 
 $color-font:                  $color-darkgrey;
+$color-primary:               $color-cherry;
 
-$color-primary-gradient:               linear-gradient(90deg, #de6262, #ffb88c);
-$color-primary-gradient-reversed:      linear-gradient(-90deg, #de6262, #ffb88c);
+$color-primary-gradient:               linear-gradient(90deg, $color-cherry, $color-peach);
+$color-primary-gradient-reversed:      linear-gradient(-90deg, $color-cherry, $color-peach);
 
 // custom variables
 // ==========================================================================
