@@ -25,12 +25,13 @@ body {
 	flex-flow: column wrap;
 }
 
-.l-content,
 .container {
 	@include container;
 }
 
 .l-content {
+	@include container;
+	align-content: flex-start;
 	
 	@include media(md) {
 		margin-top: -150px;
@@ -38,6 +39,7 @@ body {
 		padding: 40px;
 		border-radius: $border-radius-default;
 		@include card-1;
+		min-height: 500px;
 	}
 }
 

@@ -14,15 +14,14 @@
 	import CasePreview from '~/components/Portfolio/CasePreview';
 
 	export default {
-		components: {
-			CasePreview
-		},
-
 		props: {
 			cases: {
 				type: Array,
 				required: true
 			}
+		},
+		components: {
+			CasePreview
 		}
 	}
 </script>
