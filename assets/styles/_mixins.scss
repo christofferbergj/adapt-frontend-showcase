@@ -10,8 +10,7 @@
 @mixin title {
 	text-transform: uppercase;
 	@include font-size(30px);
-	margin-top: 0;
-	margin-bottom: $gutter;
+	margin: 0 0 20px 0;
 	color: $color-primary;
 }
 

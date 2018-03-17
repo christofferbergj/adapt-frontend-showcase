@@ -2,20 +2,18 @@
 	<div class="l-content">
 		<div class="case-intro">
 			<CaseList :cases="loadedCases"></CaseList>
-
-			<div class="case-intro__content">
-				<h1>Let us break your competition</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult,
-					salvam esse se, quod concedimus; Itaque ab his ordiamur. Praeterea sublata cognitione et scientia
-					tollitur omnis ratio et vitae degendae et rerum gerendarum. Duo Reges: constructio interrete. Est
-					enim effectrix multarum et magnarum voluptatum. Quid enim tanto opus est instrumento in optimis
-					artibus comparandis?
-				</p>
-
-				<AppButton @click.native="$router.push('/portfolio')"></AppButton>
-			</div>
 		</div>
+
+		<h1 class="title">Let us break your competetion</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult,
+			salvam esse se, quod concedimus; Itaque ab his ordiamur. Praeterea sublata cognitione et scientia
+			tollitur omnis ratio et vitae degendae et rerum gerendarum. Duo Reges: constructio interrete. Est
+			enim effectrix multarum et magnarum voluptatum. Quid enim tanto opus est instrumento in optimis
+			artibus comparandis?
+		</p>
+
+		<AppButton @click.native="$router.push('/portfolio')"></AppButton>
 	</div>
 </template>
 
@@ -78,19 +76,12 @@
 	.l-content {
 
 		.case-intro {
+			margin: -25px;
+			margin-bottom: $gutter;
+		}
 
-			&__content {
-				padding: 40px;
-				max-width: 80%;
-
-				h1 {
-					@include title;
-				}
-
-				.btn {
-					margin-top: $gutter;
-				}
-			}
+		.btn {
+			margin-top: $gutter;
 		}
 	}
 

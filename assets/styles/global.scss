@@ -35,10 +35,9 @@ body {
 	@include media(md) {
 		margin-top: -150px;
 		background-color: $color-white;
-		padding: $content-padding;
+		padding: 40px;
 		border-radius: $border-radius-default;
 		@include card-1;
-		min-height: 300px;
 	}
 }
 
@@ -56,4 +55,8 @@ img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
+}
+
+.title {
+	@include title;
 }

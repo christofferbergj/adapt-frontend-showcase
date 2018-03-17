@@ -1,6 +1,6 @@
 <template>
 	<div class="l-content">
-		<h1>Hello from the About view</h1>
+		<h1 class="title">Hello from the About view</h1>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod, inquit, quamquam voluptatibus quibusdam est
 			saepe iucundius, tamen expetitur propter voluptatem. Itaque et manendi in vita et migrandi ratio omnis iis
