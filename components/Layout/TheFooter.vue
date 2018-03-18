@@ -1,7 +1,11 @@
 <template>
 	<footer class="footer">
 		<div class="container">
-			<h1>Hello from the Footer</h1>
+			<div class="footer-logo">
+				<nuxt-link to="/">
+					<p>Footer component</p>
+				</nuxt-link>
+			</div>
 		</div>
 	</footer>
 </template>
@@ -10,8 +14,19 @@
 
 	.footer {
 		margin-top: 150px;
-		min-height: 300px;
 		background-color: $color-white;
 		padding: $content-padding;
+
+		.footer-logo {
+			background: $color-primary-gradient;
+			padding: 5px 10px;
+
+			a {
+				color: $color-white;
+				text-decoration: none;
+				font-weight: bold;
+				@include font-size(20px);
+			}
+		}
 	}
 </style>

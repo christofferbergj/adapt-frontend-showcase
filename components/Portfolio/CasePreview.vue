@@ -1,5 +1,5 @@
 <template>
-	<div class="case-preview">
+	<div class="case-preview" :class="classes">
 		<nuxt-link :to="'/portfolio/case-' + id">
 			<img :src="thumbnail" alt="">
 		</nuxt-link>
@@ -14,13 +14,14 @@
 				type: String,
 				required: true
 			},
-			title: {
-				type: String,
-				required: true
-			},
 			thumbnail: {
 				type: String,
 				required: true
+			},
+			classes: {
+				type: Array,
+				required: true,
+				default: 'one-fourth'
 			}
 		},
 	}
@@ -28,32 +29,56 @@
 
 <style lang="scss">
 
-	$case-height-desktop: 400px;
+	$case-height-md: 300px;
+	$case-height-xl: 400px;
 
 	.case-preview {
-		margin-bottom: $gutter-mobile;
-		height: $case-height-desktop;
+		margin-bottom: $gutter-small;
+		background-color: $color-white;
 
-		@include media(md) {
-			lost-column: 1/2 2 $content-padding;
+		@include hover-state {
+			a {
+				img {
+					transform: scale(1.04);
+				}
+			}
+		};
+
+		&.one-third {
+			@include media(md) {
+				lost-column: 1/3 3 $content-padding;
+			}
 		}
 
-		@include media(lg) {
-			lost-column: 1/3 3 $content-padding;
+		&.one-fourth {
+			@include media(md) {
+				lost-column: 1/4 4 $content-padding;
+			}
 		}
 
 		a {
 			display: flex;
 			align-items: center;
+			overflow: hidden;
+			height: $case-height-md;
+
+			@include media(xl) {
+				height: $case-height-xl;
+			}
 
 			img {
-				height: $case-height-desktop;
+				height: $case-height-md;
 				object-fit: cover;
 				@include transition;
 
-				@include hover-state {
-				};
+				@include media(xl) {
+					height: $case-height-xl;
+				}
 			}
+		}
+
+		&-content {
+			padding: $content-padding;
 		}
 	}
 

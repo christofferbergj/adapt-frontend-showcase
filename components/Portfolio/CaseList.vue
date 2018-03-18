@@ -5,7 +5,9 @@
 			:key="item.id"
 			:id="item.id"
 			:title="item.title"
-			:thumbnail="item.thumbnail">
+			:description="item.description"
+			:thumbnail="item.thumbnail"
+			:classes="classes">
 		</CasePreview>
 	</div>
 </template>
@@ -16,6 +18,10 @@
 	export default {
 		props: {
 			cases: {
+				type: Array,
+				required: true
+			},
+			classes: {
 				type: Array,
 				required: true
 			}
