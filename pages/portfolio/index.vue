@@ -1,6 +1,6 @@
 <template>
 	<div class="portfolio">
-		<case-preview-card :cases="loadedCases" :classes="'one-fourth'"></case-preview-card>
+		<case-preview-card :cases="loadedCases" classes="one-fourth"></case-preview-card>
 	</div>
 </template>
 

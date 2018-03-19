@@ -2,7 +2,7 @@
 	<div class="l-content">
 		<div class="l-intro">
 			<div class="case-intro">
-				<CaseList :cases="loadedCases" :classes="'one-third'"></CaseList>
+				<CaseList :cases="loadedCases" classes="one-third"></CaseList>
 			</div>
 
 			<h1 class="title">Let us break your competetion</h1>
