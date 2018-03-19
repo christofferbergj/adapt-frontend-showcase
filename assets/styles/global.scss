@@ -33,6 +33,10 @@ body {
 .l-content {
 	@include container;
 	align-content: flex-start;
+	
+	@include media(md) {
+		margin-top: $gutter;
+	}
 }
 
 .page-enter-active,
