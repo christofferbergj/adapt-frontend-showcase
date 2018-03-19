@@ -1,4 +1,4 @@
-# frontend
+# Frontend showcase - Adapt A/S
 
 > My astonishing Nuxt.js project
 
