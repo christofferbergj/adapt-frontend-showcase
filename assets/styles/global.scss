@@ -60,13 +60,29 @@ img {
 }
 
 .one-third {
+	width: 100%;
+	
+	@include media(sm) {
+		lost-column: 1/2 2 $content-padding;
+	}
+	
 	@include media(md) {
 		lost-column: 1/3 3 $content-padding;
 	}
 }
 
 .one-fourth {
+	width: 100%;
+	
+	@include media(sm) {
+		lost-column: 1/2 2 $content-padding;
+	}
+	
 	@include media(md) {
+		lost-column: 1/3 3 $content-padding;
+	}
+	
+	@include media(lg) {
 		lost-column: 1/4 4 $content-padding;
 	}
 }

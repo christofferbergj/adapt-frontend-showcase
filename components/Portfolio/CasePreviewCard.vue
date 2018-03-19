@@ -46,6 +46,7 @@
 		.case-card {
 			margin-bottom: $gutter-small;
 			background-color: $color-white;
+			width: 100%;
 
 			a {
 				display: flex;
@@ -61,6 +62,7 @@
 					height: $case-height-md;
 					object-fit: cover;
 					@include transition;
+					width: 100%;
 
 					@include media(xl) {
 						height: $case-height-xl;

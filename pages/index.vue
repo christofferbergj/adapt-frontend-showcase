@@ -89,8 +89,12 @@
 			}
 
 			.case-intro {
-				margin: -25px;
 				margin-bottom: $gutter;
+
+				@include media(md) {
+					margin: -25px;
+					margin-bottom: $gutter;
+				}
 			}
 
 			.btn {

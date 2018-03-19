@@ -29,6 +29,7 @@
 
 <style lang="scss">
 
+	$case-height-sm: 200px;
 	$case-height-md: 300px;
 	$case-height-xl: 400px;
 
@@ -45,6 +46,9 @@
 		};
 
 		&.one-third {
+			@include media(sm) {
+				lost-column: 1/2 2 $content-padding;
+			}
 			@include media(md) {
 				lost-column: 1/3 3 $content-padding;
 			}
@@ -60,7 +64,11 @@
 			display: flex;
 			align-items: center;
 			overflow: hidden;
-			height: $case-height-md;
+			height: $case-height-sm;
+
+			@include media(md) {
+				height: $case-height-md;
+			}
 
 			@include media(xl) {
 				height: $case-height-xl;
@@ -70,6 +78,7 @@
 				height: $case-height-md;
 				object-fit: cover;
 				@include transition;
+				width: 100%;
 
 				@include media(xl) {
 					height: $case-height-xl;
