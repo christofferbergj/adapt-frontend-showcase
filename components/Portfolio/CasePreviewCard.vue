@@ -26,7 +26,7 @@
 				required: true
 			},
 			classes: {
-				type: Array,
+				type: String,
 				required: true,
 				default: 'one-fourth'
 			}
