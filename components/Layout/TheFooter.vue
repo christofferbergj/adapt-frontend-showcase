@@ -2,9 +2,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-logo">
-				<nuxt-link to="/">
-					<p>Footer component</p>
-				</nuxt-link>
+				<p>Footer component</p>
 			</div>
 		</div>
 	</footer>
@@ -20,13 +18,10 @@
 		.footer-logo {
 			background: $color-primary-gradient;
 			padding: 5px 10px;
-
-			a {
-				color: $color-white;
-				text-decoration: none;
-				font-weight: bold;
-				@include font-size(20px);
-			}
+			color: $color-white;
+			text-decoration: none;
+			font-weight: bold;
+			@include font-size(20px);
 		}
 	}
 </style>
