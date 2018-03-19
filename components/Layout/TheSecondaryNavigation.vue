@@ -101,7 +101,7 @@
 			&.is-active {
 
 				.line-menu {
-					margin-left: 10px;
+					margin-left: 5px;
 
 					&.top {
 						transform: rotate(45deg) translateY(12px);
