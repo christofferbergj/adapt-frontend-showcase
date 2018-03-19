@@ -1,6 +1,6 @@
 <template>
 	<div class="cases">
-		<div class="case-preview" v-for="item in cases" :class="classes">
+		<div class="case-preview" v-for="item in cases" :class="classes" :key="item.id">
 			<nuxt-link :to="'/portfolio/case-' + item.id">
 				<img :src="item.thumbnail" alt="">
 			</nuxt-link>
