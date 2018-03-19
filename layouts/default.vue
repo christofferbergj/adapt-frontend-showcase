@@ -9,14 +9,14 @@
 
 <script>
 	import TheHeader from '~/components/Layout/TheHeader';
-	import TheFooter from '~/components/Layout/TheFooter';
 	import TheHero from '~/components/Layout/TheHero';
+	import TheFooter from '~/components/Layout/TheFooter';
 
 	export default {
 		components: {
 			TheHeader,
-			TheFooter,
-			TheHero
+			TheHero,
+			TheFooter
 		}
 	}
 </script>
