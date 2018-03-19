@@ -1,8 +1,10 @@
 <template>
-	<div class="case-preview" :class="classes">
-		<nuxt-link :to="'/portfolio/case-' + id">
-			<img :src="thumbnail" alt="">
-		</nuxt-link>
+	<div class="cases">
+		<div class="case-preview" v-for="item in cases" :class="classes">
+			<nuxt-link :to="'/portfolio/case-' + item.id">
+				<img :src="item.thumbnail" alt="">
+			</nuxt-link>
+		</div>
 	</div>
 </template>
 
@@ -10,12 +12,8 @@
 
 	export default {
 		props: {
-			id: {
-				type: String,
-				required: true
-			},
-			thumbnail: {
-				type: String,
+			cases: {
+				type: Array,
 				required: true
 			},
 			classes: {

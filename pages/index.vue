@@ -2,7 +2,7 @@
 	<div class="l-content">
 		<div class="l-intro">
 			<div class="case-intro">
-				<CaseList :cases="loadedCases" classes="one-third"></CaseList>
+				<CasePreview :cases="loadedCases" classes="one-third"></CasePreview>
 			</div>
 
 			<h1 class="title">Let us break your competetion</h1>
@@ -20,13 +20,13 @@
 </template>
 
 <script>
-	import CaseList from '~/components/Portfolio/CaseList';
+	import CasePreview from '~/components/Portfolio/CasePreview';
 	import AppButton from '~/components/UI/AppButton';
 
 	export default {
 		components: {
-			CaseList,
-			AppButton,
+			CasePreview,
+			AppButton
 		},
 		head: {
 			bodyAttrs: {
@@ -94,6 +94,11 @@
 				@include media(md) {
 					margin: -25px;
 					margin-bottom: $gutter;
+				}
+
+				.cases {
+					display: flex;
+					flex-flow: row wrap;
 				}
 			}
 

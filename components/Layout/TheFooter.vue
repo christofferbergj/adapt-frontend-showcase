@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer-logo">
-				<p>Footer component</p>
+				<span>Footer component</span>
 			</div>
 		</div>
 	</footer>

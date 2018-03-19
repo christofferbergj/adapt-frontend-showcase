@@ -3,7 +3,7 @@
 		<div class="nav">
 			<div class="site-logo">
 				<nuxt-link to="/">
-					<p>Frontend</p>
+					Frontend
 				</nuxt-link>
 			</div>
 

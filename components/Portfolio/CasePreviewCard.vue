@@ -1,6 +1,6 @@
 <template>
 	<div class="cases">
-		<div class="case-card"
+		<div class="case-preview-card"
 		     v-for="item in cases"
 		     :key="item.id"
 		     :class="classes">
@@ -43,7 +43,7 @@
 		display: flex;
 		flex-flow: row wrap;
 
-		.case-card {
+		.case-preview-card {
 			margin-bottom: $gutter-small;
 			background-color: $color-white;
 			width: 100%;
@@ -76,6 +76,14 @@
 
 			.content {
 				padding: $content-padding;
+
+				h2 {
+					margin: 0 0 10px 0;
+				}
+
+				p {
+					margin: 0;
+				}
 			}
 		}
 	}
