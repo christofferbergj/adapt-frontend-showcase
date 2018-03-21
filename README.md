@@ -1,6 +1,6 @@
 # Frontend showcase - Adapt A/S
 
-> My astonishing Nuxt.js project
+> [Live demo](https://christoffer-adapt.herokuapp.com/).
 
 ## Build Setup
 
