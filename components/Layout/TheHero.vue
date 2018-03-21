@@ -56,7 +56,10 @@
 					left: 0;
 					right: 0;
 					margin: 0 auto;
-					width: 100px;
+
+					@include media(lg) {
+						width: 100px;
+					}
 				}
 			}
 		}
