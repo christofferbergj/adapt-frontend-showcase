@@ -69,7 +69,7 @@
 		position: relative;
 
 		@include media-down(md) {
-		    display: none;
+			margin-left: auto;
 		}
 
 		.menu-toggle-wrapper {
@@ -125,18 +125,24 @@
 			padding: 0;
 			list-style: none;
 			position: absolute;
-			top: 53px;
 			right: 0;
+			top: 35px;
 			background-color: $color-white;
-			padding: 10px 30px;
+			padding: 0 15px;
 			@include card-1;
 			text-transform: uppercase;
 			font-weight: bold;
 			opacity: 0;
 			transform: translateY(10px);
-			min-width: 300px;
 			transition-delay: .1s;
 			pointer-events: none;
+			min-width: 250px;
+
+			@include media(md) {
+				top: 53px;
+				min-width: 300px;
+				padding: 10px 30px;
+			}
 
 			&.is-active {
 				opacity: 1;
