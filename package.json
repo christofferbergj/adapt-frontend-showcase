@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.0.0",
-		"nuxt": "^1.0.0",
+		"nuxt": "^2.15.8",
 		"nuxt-sass-resources-loader": "^1.2.0",
 		"vue-click-outside": "^1.0.7",
 		"vue-scroll-class": "^1.2.3"
